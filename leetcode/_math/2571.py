@@ -1,8 +1,6 @@
-from math import log2
-
-
 class Solution:
     def minOperations(self, n: int) -> int:
+        from math import log2
         res = 0
         while n > 0:
             if log2(n) == int(log2(n)):
