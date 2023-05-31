@@ -5,7 +5,7 @@ from typing import List
 class Solution:
     def rotate(self, matrix: List[List[int]]) -> None:
         n = len(matrix)
-        cp = copy.deepcopy(matrix)
+        cp = [row[:] for row in matrix]
         for i in range(n):
             for j in range(n):
                 matrix[j][n-i-1] = cp[i][j]
